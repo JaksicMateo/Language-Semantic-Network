@@ -29,30 +29,22 @@ def build_network(json_path=None):
             G.add_node(root_node_id, type="root_category", label=root_category)
 
         # process the family attribute and link it to the root
-        if family_node_id:
-            if not G.has_node(family_node_id):
-                G.add_node(family_node_id, type="family", label=family)
-
-            if not G.has_edge(root_node_id, family_node_id):
-                G.add_edge(root_node_id, family_node_id)
+        if family:
+            if not G.has_node(family):
+                traits = {}
+                if family == "Turkic":
+                    traits = {"morphological_type": "Agglutinative", "vowel_harmony": True}
+                G.add_node(family, type="family", **traits)
+            G.add_edge(root_node_id, family)
 
         # process the branch attribute and link it to the parent family attribute
-        if branch_node_id:
-            if not G.has_node(branch_node_id):
-                # if branch is Slavic, we want to add shared attributes
+        if branch:
+            if not G.has_node(branch):
+                traits = {}
                 if branch == "Slavic":
-                    slavic_traits = {
-                        "verb_aspect": True,
-                        "gender_system": True,
-                        "vowel_harmony": False
-                    }
-                    G.add_node(branch_node_id, type="branch", label=branch, **slavic_traits)
-                else:
-                    G.add_node(branch_node_id, type="branch", label=branch)
-
-            if family_node_id:
-                if not G.has_edge(family_node_id, branch_node_id):
-                    G.add_edge(family_node_id, branch_node_id)
+                    traits = {"verb_aspect": True, "gender_system": True, "vowel_harmony": False}
+                G.add_node(branch, type="branch", **traits)
+            if family: G.add_edge(family, branch)
 
         # process the subgroup attribute and link it to the parent branch attribute
         if subgroup_node_id:
