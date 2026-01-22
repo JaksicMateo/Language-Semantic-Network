@@ -77,7 +77,7 @@ The semantic network is searchable via a dedicated interface that supports 21 di
 * **Q20**: What property does `<language>` have for `<attribute>`?
 * **Q21**: Which languages have the `<name>` status?
 
-## Getting Started
+## Setup Instructions
 
 ### Prerequisites
 * **Python 3.8+**
