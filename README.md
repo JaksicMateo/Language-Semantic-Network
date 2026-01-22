@@ -76,3 +76,27 @@ The semantic network is searchable via a dedicated interface that supports 21 di
 * **Q19**: Which language is most different from `<language>`?
 * **Q20**: What property does `<language>` have for `<attribute>`?
 * **Q21**: Which languages have the `<name>` status?
+
+## Getting Started
+
+### Prerequisites
+* **Python 3.8+**
+* **Git**
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/JaksicMateo/Language-Semantic-Network.git
+   cd Language-Semantic-Network
+   ```
+
+2. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run the Application:**
+    ```bash
+    python main.py
+    ```
