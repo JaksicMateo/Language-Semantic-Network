@@ -4,15 +4,15 @@
 
 The project represents languages as a semantic network using Python and NetworkX. The network models the hierarchy of language families, branches, subgroups, and individual languages, while capturing linguistic features as node attributes.
 
-Key goals of this project:
+**Key goals of this project:**
 
-1. Represent a real-world domain, languages, as a graph-based semantic network
+* Represent a real-world domain, languages, as a graph-based semantic network
 
-2. Implement property inheritance along the hierarchy
+* Implement property inheritance along the hierarchy
 
-3. Enable graph queries, such as retrieving inherited properties, listing languages by features, and finding relationships between languages
+* Enable graph queries, such as retrieving inherited properties, listing languages by features, and finding relationships between languages
 
-4. Demonstrate multiple example queries highlighting linguistic characteristics and hierarchy traversal
+* Demonstrate multiple example queries highlighting linguistic characteristics and hierarchy traversal
 
 ## Languages Modeled
 
